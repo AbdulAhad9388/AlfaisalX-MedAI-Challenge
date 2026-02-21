@@ -13,7 +13,7 @@ from tensorflow.keras.layers import RandomFlip, RandomRotation, RandomZoom, Rand
 from tensorflow.keras.regularizers import L2, L1
 from tensorflow.keras.callbacks import ModelCheckpoint
 
-dataset = np.load(r"/kaggle/input/pneumoniamnist/pneumoniamnist.npz")
+dataset = np.load(r"/ahadpc/input/pneumoniamnist/pneumoniamnist.npz")
 dataset["train_images"].shape, dataset["train_labels"].shape
 
 def normalization(image_set):
@@ -314,6 +314,7 @@ print(f"Test Loss: {test_metrics[0]:.4f}")
 print(f"Test Balanced Accuracy: {test_metrics[1]:.4f}")
 print(f"Test AUC: {test_metrics[2]:.4f}")
 print(f"Test F1-Score: {test_metrics[3]:.4f}")
+
 
 
 plot_metrics(history)
